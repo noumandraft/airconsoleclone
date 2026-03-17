@@ -8,7 +8,7 @@ const io = new Server(server, { cors: { origin: '*', methods: ['GET', 'POST'] } 
 const PORT = process.env.PORT || 3000;
 
 const PLAYER_COLORS = ['#FF4757','#1E90FF','#2ED573','#FFA502','#A29BFE','#FF6B81','#00D2D3','#ECCC68'];
-const VALID_GAMES   = ['kites', 'trivia'];
+const VALID_GAMES   = ['kites', 'trivia', 'drawing'];
 const rooms = {};
 
 app.get('/', (req, res) => res.send('AirConsole backend is running ✅'));
