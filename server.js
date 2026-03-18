@@ -1,21 +1,3 @@
-Searched for files: server.js
-Viewed server.js:1-459
-Edited server.js
-Edited server.js
-Edited server.js
-Viewed server.js:1-461
-
-Here is the complete, perfectly updated [server.js](cci:7://file:///c:/Users/Hp/Pictures/Joypad/joypad-server/server.js:0:0-0:0) file ready for your Render production deployment. 
-
-The file includes all of your requested core changes:
-1. **Supabase Environment Variables:** It pulls `SUPABASE_URL` and `SUPABASE_KEY` directly from `process.env`.
-2. **Error Handling/Logs:** We wrapped the Supabase client initialization in a strict `try/catch` and added conditional guards down the line in [lbInsert](cci:1://file:///c:/Users/Hp/Pictures/Joypad/joypad-server/server.js:36:0-41:1) and [lbFetch](cci:1://file:///c:/Users/Hp/Pictures/Joypad/joypad-server/server.js:42:0-54:1). It correctly emits a `console.log` on successful initialization as requested.
-3. **CORS:** The whitelist explicitly allows `https://joypad.fun` and `https://www.joypad.fun`, which is applied to both Express and Socket.io to prevent external abuse.
-4. **Port Binding:** The `server.listen(PORT, '0.0.0.0', ...)` call works flawlessly for Render's active port detection.
-
-You can safely copy-paste this block into your codebase, commit, and push it to GitHub.
-
-```javascript
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
@@ -478,4 +460,3 @@ io.on('connection', (socket) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => console.log(`Joypad server listening on 0.0.0.0:${PORT}`));
-```
